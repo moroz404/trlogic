@@ -1,0 +1,226 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+
+/* Utility CSS */
+.flex {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.flex-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* End of Utility CSS */
+
+strong {
+    font-weight: bold;
+}
+
+html {
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+body {
+    font: 12px/18px Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    background: #cee3f3;
+}
+
+.header nav span {
+    margin-right: 15px;
+    color: #111;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.header nav span.active, .header nav span:hover {
+    color: #fff;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.main {
+    padding-top: 40px;
+    background: #cef3da;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.main-description {
+    padding: 5px;
+    background: #f3f1ce;
+}
+
+.content {
+    float: left;
+    padding: 5px 210px 5px 5px;
+}
+
+.sidebar {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    float: left;
+    width: 190px;
+    top: 50px;
+    margin-left: -200px;
+    padding: 5px;
+    background: #f3ced2;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    min-height: 20px;
+    padding: 5px;
+    background: #cee3f3;
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+/* Aside
+-----------------------------------------------------------------------------*/
+body > aside {
+    position: fixed;
+    top: 40px;
+    padding: 5px;
+    width: 290px;
+    height: 100%;
+    background: #d5cef3;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.left-aside {
+    left: -300px;
+}
+
+.left-aside.active {
+    left: 0;
+}
+
+.right-aside {
+    right: -300px;
+}
+
+.right-aside.active {
+    right: 0;
+}
+
+/* Media Queries
+-----------------------------------------------------------------------------*/
+@media (max-width: 640px) {
+    .content {
+        padding: 5px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: inherit;
+        top: inherit;
+        margin-left: inherit;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .wrapper {
+        height: auto;
+    }
+}
