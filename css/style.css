@@ -150,8 +150,10 @@ body {
 }
 
 .main-description {
+    height: 100px;
     padding: 5px;
     background: #f3f1ce;
+    overflow: hidden;
 }
 
 .content {
@@ -232,6 +234,10 @@ body {
         width: inherit;
         top: inherit;
         margin-left: inherit;
+    }
+
+    .footer, .main-description {
+        height: inherit;
     }
 }
 
