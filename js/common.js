@@ -18,11 +18,11 @@ $(function () {
     //sticky fix
     $(window).scroll(function () {
         var fix = false;
-        if ($(window).scrollTop() > (md.height() + 10) && $(window).height() < (sidebar.height() + 40)) {
+        if ($(window).scrollTop() > md.outerHeight() && $(window).height() < (sidebar.height() + 40)) {
             fix = true;
         }
         if (ua.indexOf("MSIE ") > 0 || ua.indexOf('Trident/') > 0 || ua.indexOf('Edge/') > 0 || fix) {
-            if ($(window).scrollTop() > (md.height() + 10) && $(window).width() > 640) {
+            if ($(window).scrollTop() > md.outerHeight() && $(window).width() > 640) {
                 sidebar.css({'position': 'fixed', 'margin-left': content.width() + 15});
             } else {
                 sidebar.removeAttr('style');
