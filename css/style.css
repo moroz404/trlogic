@@ -90,6 +90,7 @@ strong {
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
