@@ -19,12 +19,11 @@ $(function () {
     });
 
     //transition fix
-    var delta = body.innerWidth() - body.prop("scrollWidth");
-    ra.css({'right': wrapper.offset().left + delta});
+    ra.css({'right': wrapper.offset().left});
     $(window).resize(function () {
         if ($(window).width() > 640) {
             lra.addClass('transition');
-            ra.css({'right': wrapper.offset().left + delta});
+            ra.css({'right': wrapper.offset().left});
         } else {
             lra.removeClass('transition');
             lat.removeClass('active');
@@ -34,9 +33,9 @@ $(function () {
     });
 
     //sticky fix
-    $('.wrapper, body').scroll(function () {
+    $(window).scroll(function () {
         var fix = false;
-        var top = Math.max(wrapper.scrollTop(), body.scrollTop());
+        var top =  $(window).scrollTop();
         if (top > md.outerHeight() && $(window).height() < (sidebar.height() + 40)) {
             fix = true;
         }

@@ -97,7 +97,6 @@ strong {
 
 html {
     height: 100%;
-    overflow-x: hidden;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -222,9 +221,6 @@ body {
 /* Media Queries
 -----------------------------------------------------------------------------*/
 @media (max-width: 640px) {
-    .header nav span.active, .header nav span:hover {
-        color: #111;
-    }
 
     .content {
         padding: 5px;
